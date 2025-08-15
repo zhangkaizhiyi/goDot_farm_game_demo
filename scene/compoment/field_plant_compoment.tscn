@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpuju1d7wj728"]
+
+[ext_resource type="Script" uid="uid://budpfys58426c" path="res://scene/compoment/field_plant_compoment.gd" id="1_j4yrc"]
+
+[node name="FieldPlantCompoment" type="Node"]
+script = ExtResource("1_j4yrc")

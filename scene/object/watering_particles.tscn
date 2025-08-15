@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctusn7sbka0ld"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bcrto"]
+particle_flag_disable_z = true
+orbit_velocity_min = -1.0
+orbit_velocity_max = 1.0
+gravity = Vector3(0, -10, 0)
+color = Color(0.83552, 0.987214, 0.98806, 1)
+
+[node name="WateringParticles2D" type="GPUParticles2D"]
+process_material = SubResource("ParticleProcessMaterial_bcrto")

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="SaveGameDataResource" load_steps=8 format=3 uid="uid://dlotcclvjpsmf"]
+
+[ext_resource type="Script" uid="uid://b61mpkab7qnxw" path="res://resources/node_data_resource.gd" id="1_jd3kr"]
+[ext_resource type="Script" uid="uid://c3viehq7wro17" path="res://resources/tilemap_data_resource.gd" id="2_lrk2j"]
+[ext_resource type="Script" uid="uid://d0y3xno7x84fk" path="res://resources/player_data_resource.gd" id="3_tsqoi"]
+[ext_resource type="Script" uid="uid://c2152hgxkxu7l" path="res://resources/save_game_data_resource.gd" id="4_xvd4r"]
+
+[sub_resource type="Resource" id="Resource_jd3kr"]
+script = ExtResource("2_lrk2j")
+cells = Array[Vector2i]([Vector2i(16, 9), Vector2i(15, 9)])
+terrain_set = 0
+terrain = 1
+global_position = Vector2(0, 0)
+node_path = NodePath("/root/TestSceneSaveData/GameTilemap/Field")
+parent_node_path = NodePath("/root/TestSceneSaveData/GameTilemap")
+
+[sub_resource type="Resource" id="Resource_lrk2j"]
+script = ExtResource("3_tsqoi")
+facing_direction = Vector2(0, 1)
+global_position = Vector2(249, 150)
+node_path = NodePath("/root/TestSceneSaveData/Player")
+parent_node_path = NodePath("/root/TestSceneSaveData")
+
+[sub_resource type="Resource" id="Resource_tsqoi"]
+script = ExtResource("3_tsqoi")
+facing_direction = Vector2(0, 1)
+global_position = Vector2(249, 150)
+node_path = NodePath("/root/TestSceneSaveData/Player")
+parent_node_path = NodePath("/root/TestSceneSaveData")
+
+[resource]
+script = ExtResource("4_xvd4r")
+save_data_nodes = Array[ExtResource("1_jd3kr")]([SubResource("Resource_jd3kr"), SubResource("Resource_lrk2j"), SubResource("Resource_tsqoi")])

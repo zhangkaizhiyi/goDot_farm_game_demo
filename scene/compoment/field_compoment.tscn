@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://rdl0fv45kqmp"]
+
+[ext_resource type="Script" uid="uid://bor4k435onp67" path="res://scene/compoment/field_compoment.gd" id="1_pcmvd"]
+
+[node name="FieldCompoment" type="Node"]
+script = ExtResource("1_pcmvd")

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="SaveGameDataResource" load_steps=10 format=3 uid="uid://diigk317kmkq4"]
+
+[ext_resource type="Script" uid="uid://b61mpkab7qnxw" path="res://resources/node_data_resource.gd" id="1_eqjlu"]
+[ext_resource type="Script" uid="uid://d0y3xno7x84fk" path="res://resources/player_data_resource.gd" id="2_3ubhg"]
+[ext_resource type="Script" uid="uid://c3viehq7wro17" path="res://resources/tilemap_data_resource.gd" id="2_jueqo"]
+[ext_resource type="Script" uid="uid://bc0monbxq8xjm" path="res://resources/scene_data_resources.gd" id="3_5iupb"]
+[ext_resource type="Script" uid="uid://c2152hgxkxu7l" path="res://resources/save_game_data_resource.gd" id="3_jueqo"]
+
+[sub_resource type="Resource" id="Resource_de0d7"]
+script = ExtResource("2_jueqo")
+cells = Array[Vector2i]([Vector2i(21, 29), Vector2i(22, 29), Vector2i(21, 30), Vector2i(22, 30), Vector2i(12, 48), Vector2i(21, 38), Vector2i(20, 39), Vector2i(20, 41), Vector2i(23, 41), Vector2i(21, 40), Vector2i(12, 39), Vector2i(7, 39)])
+terrain_set = 0
+terrain = 1
+global_position = Vector2(-1, 0)
+node_path = NodePath("/root/MainScene/GameRoot/LevelRoot/Level1/GameTilemap/Field")
+parent_node_path = NodePath("/root/MainScene/GameRoot/LevelRoot/Level1/GameTilemap")
+
+[sub_resource type="Resource" id="Resource_ppika"]
+script = ExtResource("3_5iupb")
+node_name = "Corn"
+scene_file_path = "res://scene/object/corn/corn.tscn"
+global_position = Vector2(200, 776)
+node_path = NodePath("/root/MainScene/GameRoot/LevelRoot/Level1/Plants/Corn")
+parent_node_path = NodePath("/root/MainScene/GameRoot/LevelRoot/Level1/Plants")
+
+[sub_resource type="Resource" id="Resource_j0u05"]
+script = ExtResource("2_3ubhg")
+facing_direction = Vector2(-1, 0)
+global_position = Vector2(151.996, 773.315)
+node_path = NodePath("/root/MainScene/GameRoot/Player")
+parent_node_path = NodePath("/root/MainScene/GameRoot")
+
+[sub_resource type="Resource" id="Resource_5o5du"]
+script = ExtResource("2_3ubhg")
+facing_direction = Vector2(0, 1)
+global_position = Vector2(338, 177)
+node_path = NodePath("/root/GameMenuScreen/TestSceneCollect/Player")
+parent_node_path = NodePath("/root/GameMenuScreen/TestSceneCollect")
+
+[resource]
+script = ExtResource("3_jueqo")
+save_data_nodes = Array[ExtResource("1_eqjlu")]([SubResource("Resource_de0d7"), SubResource("Resource_ppika"), SubResource("Resource_j0u05"), SubResource("Resource_5o5du")])

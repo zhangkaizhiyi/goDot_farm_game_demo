@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://8ny8k0dunw18"]
+
+[ext_resource type="Script" uid="uid://bmtwmmtribl4m" path="res://scene/compoment/feed_compoment.gd" id="1_46mjk"]
+
+[node name="FeedCompoment" type="Area2D"]
+collision_layer = 32
+collision_mask = 64
+script = ExtResource("1_46mjk")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
