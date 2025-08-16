@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://dffdbxbe2psyu"]
+[gd_scene load_steps=16 format=3 uid="uid://dffdbxbe2psyu"]
 
 [ext_resource type="Texture2D" uid="uid://kf8rha36idag" path="res://assets/Characters/Free Chicken Sprites.png" id="1_2i1if"]
 [ext_resource type="Script" uid="uid://b7jqfrwfyq6th" path="res://scene/character/chicken/chicken.gd" id="1_rnjy4"]
+[ext_resource type="PackedScene" uid="uid://c4ycenby6td7d" path="res://audio/sfx/chicken_cluck_multiply_sfx.tscn" id="2_irk3o"]
 [ext_resource type="Script" uid="uid://dmhg6xy0mnjov" path="res://scripts/statemachine/node_state_machine.gd" id="2_xhevf"]
 [ext_resource type="Script" uid="uid://cyaky0pm38puv" path="res://scene/character/chicken/idle_state.gd" id="3_jav2k"]
+[ext_resource type="PackedScene" uid="uid://dvbu0tvqa27tt" path="res://scene/compoment/audio_play_timer_compoment.tscn" id="3_lon2w"]
 [ext_resource type="Script" uid="uid://dwrxow72xpauj" path="res://scene/character/chicken/walk_state.gd" id="4_jav2k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gajqd"]
@@ -68,6 +70,14 @@ radius = 5.0
 collision_layer = 128
 collision_mask = 129
 script = ExtResource("1_rnjy4")
+
+[node name="ChickenCluckMultiplySFX" parent="." instance=ExtResource("2_irk3o")]
+max_distance = 90.0
+
+[node name="AudioPlayTimerCompoment" parent="." node_paths=PackedStringArray("audio_player") instance=ExtResource("3_lon2w")]
+wait_time = 5.0
+autostart = true
+audio_player = NodePath("../ChickenCluckMultiplySFX")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)

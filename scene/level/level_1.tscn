@@ -1,5 +1,6 @@
-[gd_scene load_steps=31 format=4 uid="uid://tgush57okm8r"]
+[gd_scene load_steps=32 format=4 uid="uid://tgush57okm8r"]
 
+[ext_resource type="PackedScene" uid="uid://b004eqpw578lr" path="res://audio/music/on_the_farm_music.tscn" id="1_lwypc"]
 [ext_resource type="TileSet" uid="uid://dbl13fnsuh1xm" path="res://tilesets/game_test.tres" id="1_mm6v6"]
 [ext_resource type="PackedScene" uid="uid://rdl0fv45kqmp" path="res://scene/compoment/field_compoment.tscn" id="1_x4chx"]
 [ext_resource type="PackedScene" uid="uid://38vdd4r3tlcx" path="res://scene/object/trees/small_tree.tscn" id="2_k43e5"]
@@ -100,6 +101,9 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(422, 109, 412, 202, 371, 235, 322, 220, 267, 179, 257, 117, 332, 88)])
 
 [node name="Level1" type="Node2D"]
+
+[node name="OnTheFarmMusic" parent="." instance=ExtResource("1_lwypc")]
+parameters/looping = true
 
 [node name="FieldCompoment" parent="." node_paths=PackedStringArray("grass_tilemap", "field_tilemap") instance=ExtResource("1_x4chx")]
 grass_tilemap = NodePath("../GameTilemap/Grass")

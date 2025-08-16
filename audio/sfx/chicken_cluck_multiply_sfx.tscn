@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4ycenby6td7d"]
+
+[ext_resource type="AudioStream" uid="uid://bwosaoujmo3y1" path="res://assets/audio/chicken-cluck-1.ogg" id="1_b8fbl"]
+[ext_resource type="AudioStream" uid="uid://bwuej5u7se5l2" path="res://assets/audio/chicken-cluck-2.ogg" id="2_jea7d"]
+[ext_resource type="AudioStream" uid="uid://doqfvmnnwijpp" path="res://assets/audio/chicken-cluck-3.ogg" id="3_rpm1t"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g4q5t"]
+streams_count = 3
+stream_0/stream = ExtResource("1_b8fbl")
+stream_1/stream = ExtResource("2_jea7d")
+stream_2/stream = ExtResource("3_rpm1t")
+
+[node name="ChickenCluckMultiplySFX" type="AudioStreamPlayer2D"]
+stream = SubResource("AudioStreamRandomizer_g4q5t")

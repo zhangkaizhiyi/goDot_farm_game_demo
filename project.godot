@@ -15,6 +15,10 @@ run/main_scene="uid://bj3kvjhu741rr"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://vwtbjkqfgn47"
+
 [autoload]
 
 ToolManager="*res://scripts/global/tool_manager.gd"

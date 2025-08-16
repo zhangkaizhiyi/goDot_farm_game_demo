@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://ba6nkb5hw5t1e"]
+[gd_scene load_steps=7 format=4 uid="uid://ba6nkb5hw5t1e"]
 
 [ext_resource type="TileSet" uid="uid://dbl13fnsuh1xm" path="res://tilesets/game_test.tres" id="1_brrb2"]
 [ext_resource type="PackedScene" uid="uid://cp1lvpjiecs8n" path="res://scene/compoment/day_and_night_cycle_compoment.tscn" id="2_iaaq5"]
 [ext_resource type="PackedScene" uid="uid://dp2k5m8wkjjii" path="res://scene/character/player/player.tscn" id="3_q8aoy"]
 [ext_resource type="PackedScene" uid="uid://bpuju1d7wj728" path="res://scene/compoment/field_plant_compoment.tscn" id="4_q8aoy"]
 [ext_resource type="PackedScene" uid="uid://cv65dj520tnkg" path="res://scene/ui/game_screen.tscn" id="5_4mnu7"]
-[ext_resource type="Script" uid="uid://budpfys58426c" path="res://scene/compoment/field_plant_compoment.gd" id="5_anmml"]
 [ext_resource type="PackedScene" uid="uid://rdl0fv45kqmp" path="res://scene/compoment/field_compoment.tscn" id="5_brrb2"]
 
 [node name="TestSceneGameUI" type="Node2D"]
@@ -33,7 +32,6 @@ grass_tilemap = NodePath("../GameTilemap/Grass")
 field_tilemap = NodePath("../GameTilemap/Field")
 
 [node name="FieldPlantCompoment" parent="." node_paths=PackedStringArray("field_tilemap") instance=ExtResource("4_q8aoy")]
-script = ExtResource("5_anmml")
 field_tilemap = NodePath("../GameTilemap/Field")
 
 [node name="Player" parent="." instance=ExtResource("3_q8aoy")]
